@@ -1,0 +1,14 @@
+-- Get the TeleportService
+local TeleportService = game:GetService("TeleportService")
+
+-- Function to teleport to the specified place and job ID
+local function teleportToJob()
+    local player = game.Players.LocalPlayer
+    if player and placeId and jobId then
+        -- Teleport the player to the specified place and job ID
+        TeleportService:TeleportToPlaceInstance(placeId, jobId, player)
+    end
+end
+
+-- Call the function to teleport
+teleportToJob()
